@@ -21,6 +21,12 @@ No worries! DontCommitHook has your back and will stop the commit. 🛑
 
 ## 🚀 Quick Setup Guide
 
+**The one-liner:**
+```bash
+mkdir -p ~/git-hooks && curl -sL https://raw.githubusercontent.com/ReallyGood/DontCommitHook/main/pre-commit -o ~/git-hooks/pre-commit && chmod +x ~/git-hooks/pre-commit && git config --global core.hooksPath ~/git-hooks
+```
+
+This does all the following, so you don’t have to run them manually:
 1. Download the `pre-commit` file from this repo.
 2. Run `mkdir ~/git-hooks` to create a `git-hooks` directory in your home folder (skip if it already exists).
 3. Move the `pre-commit` file to `~/git-hooks`.
