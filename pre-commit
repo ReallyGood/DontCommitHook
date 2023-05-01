@@ -1,0 +1,27 @@
+#!/bin/zsh
+
+# Add the local node_modules/.bin directory to the PATH
+export PATH=$PATH:./node_modules/.bin
+
+# Define a function to check for DONTCOMMIT or NOCOMMIT strings
+function check_for_nocommit {
+  for file in $(git diff --cached --name-only); do
+    if grep -qi -E 'DONTCOMMIT|NOCOMMIT' "$file"; then
+      echo "Commit aborted: Found 'DONTCOMMIT' or 'NOCOMMIT' in file: $file"
+      exit 1
+    fi
+  done
+}
+
+# Call the check_for_nocommit function
+check_for_nocommit
+
+# Check if Husky is being used in the current repository and run the local Husky pre-commit hook
+if [ -f .husky/pre-commit ]; then
+  .husky/pre-commit || exit 1
+fi
+
+# Check if the local pre-commit hook script exists before sourcing it
+if [ -f .git/hooks/pre-commit ]; then
+  source .git/hooks/pre-commit
+fi
