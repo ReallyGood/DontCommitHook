@@ -6,7 +6,7 @@ export PATH=$PATH:./node_modules/.bin
 # Define a function to check for DONTCOMMIT or NOCOMMIT strings
 function check_for_nocommit {
   for file in $(git diff --cached --name-only); do
-    if grep -qi -E 'DONTCOMMIT|NOCOMMIT' "$file"; then
+    if grep -qi -E 'DON['’]?T|NOCOMMIT' "$file"; then
       echo "Commit aborted: Found 'DONTCOMMIT' or 'NOCOMMIT' in file: $file"
       exit 1
     fi
