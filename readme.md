@@ -35,7 +35,7 @@ This command performs all the following steps, so you don’t have to run them m
 
 That’s it! The global pre-commit hook is now active for all your Git repos. It will prevent commits containing temporary or dangerous changes based on the presence of "NOCOMMIT" or "DONTCOMMIT" strings in staged chunks (so keep them close to the changes you want to block).
 
-What sets this hook apart is its effortless integration with all our repositories without any extra configuration. Plus, it plays nicely with other hooks, including the beloved Husky hook system.
+What sets this hook apart is its effortless integration with all your repositories without any extra configuration. Plus, it plays nicely with other hooks, including the beloved Husky hook system.
 
 ## 🤔 Questions or Help
 
