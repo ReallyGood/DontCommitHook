@@ -1,4 +1,4 @@
-# DontCommitHook 🚫
+# *Don’t Commit* Hook 🚫
 
 A handy global pre-commit hook that keeps your Git repositories safe by catching temporary or potentially harmful changes marked with "NOCOMMIT" or "DONTCOMMIT" before they get committed.
 
