@@ -23,7 +23,7 @@ No worries! DontCommitHook has your back and will stop the commit. 🛡️
 
 **The one-liner:**
 ```bash
-mkdir -p ~/git-hooks && curl -sL https://raw.githubusercontent.com/ReallyGood/DontCommitHook/main/pre-commit -o ~/git-hooks/pre-commit && chmod +x ~/git-hooks/pre-commit && git config --global core.hooksPath ~/git-hooks && echo "All set! DontCommitHook is ready to prevent risky commits 🛡️"
+mkdir -p ~/git-hooks && curl -sL -H "Cache-Control: no-cache" -H "Pragma: no-cache" https://raw.githubusercontent.com/ReallyGood/DontCommitHook/main/pre-commit -o ~/git-hooks/pre-commit && chmod +x ~/git-hooks/pre-commit && git config --global core.hooksPath ~/git-hooks && echo "All set! DontCommitHook is ready to prevent risky commits 🛡️"
 ```
 
 This command performs all the following steps, so you don’t have to run them manually:
